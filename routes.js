@@ -24,5 +24,7 @@ router.post("/dashboard/addplaylist", auth.protected, dashboard.addPlaylist);
 router.get("/playlist/:id", auth.protected, playlist.index);
 router.get("/playlist/:id/deletesong/:songid", auth.protected, playlist.deleteSong);
 router.post("/playlist/:id/addsong", auth.protected, playlist.addSong);
+router.get("/song/:id/editsong/:songid", auth.protected, playlist.editSong); 
+router.post("/song/:id/updatesong/:songid", playlist.updateSong); 
 
 module.exports = router;

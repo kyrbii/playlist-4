@@ -1,0 +1,19 @@
+{{> menu}} 
+ 
+<form action="/song/{{playlist.id}}/updatesong/{{song.id}}" method="POST"> 
+    <div class="row"> 
+        <div class="mb-3 col-4"> 
+            <label for="inputTitle" class="form-label">Title</label> 
+            <input placeholder="Title" type="text" class="form-control" id="inputTitle" name="title" value="{{song.title}}"> 
+        </div> 
+        <div class="mb-3 col-4"> 
+            <label for="inputArtist" class="form-label">Artist</label> 
+            <input placeholder="Artist" type="text" class="form-control" id="inputArtist" name="artist" value="{{song.artist}}"> 
+        </div> 
+        <div class="mb-3 col-4"> 
+            <label for="inputDuration" class="form-label">Duration</label> 
+            <input placeholder="00" type="number" class="form-control" id="inputDuration" name="duration" value="{{song.duration}}"> 
+        </div> 
+    </div> 
+    <button type="submit" class="btn btn-primary">Update Song</button> 
+</form> 
